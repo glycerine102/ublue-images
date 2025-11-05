@@ -4,7 +4,7 @@
 name: cosmic-laptop
 
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: Customized Fedora COSMIC Atomic
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/base-main
@@ -28,6 +28,7 @@ modules:
       packages:
         - firefox
         - firefox-langpacks
+        - thunderbird
 
     group-install:
       with-optional: true
