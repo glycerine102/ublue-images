@@ -22,11 +22,16 @@ modules:
       copr:
         - atim/starship
         - jsbillings/netbird
+      files:
+        - https://packages.microsoft.com/yumrepos/vscode
+      keys:
+        - https://packages.microsoft.com/keys/microsoft.asc
 
     install:
       packages:
         - alacritty
         - chezmoi
+        - code
         - fastfetch
         - fish
         - git-filter-repo
