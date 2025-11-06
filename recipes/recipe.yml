@@ -33,6 +33,7 @@ modules:
         - micro
         - netbird-client
         - netbird-ui
+        - numix-icon-theme-circle
         - pv
 
     group-install:
