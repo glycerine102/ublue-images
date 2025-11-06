@@ -26,6 +26,7 @@ modules:
     install:
       packages:
         - alacritty
+        - chezmoi
         - fastfetch
         - fish
         - git-filter-repo
@@ -35,6 +36,7 @@ modules:
         - netbird-ui
         - numix-icon-theme-circle
         - pv
+        - rbw
 
     group-install:
       with-optional: true
