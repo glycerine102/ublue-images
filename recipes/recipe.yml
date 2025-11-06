@@ -68,6 +68,11 @@ modules:
         - JetBrainsMono
         - SourceCodePro
 
+  - type: script
+    snippets: []
+    scripts:
+      - manage_files.sh
+
   - type: signing
 
   - type: brew
