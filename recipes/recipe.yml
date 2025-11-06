@@ -14,7 +14,7 @@ image-version: 43
 modules:
   - type: files
     files:
-      - source: system
+      - source: rootfs
         destination: /
 
   - type: dnf
