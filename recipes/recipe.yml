@@ -21,7 +21,6 @@ modules:
     repos:
       copr:
         - atim/starship
-        - jsbillings/netbird
       files:
         - https://packages.microsoft.com/yumrepos/vscode/config.repo
       keys:
@@ -38,7 +37,7 @@ modules:
         - git-filter-repo
         - mbuffer
         - micro
-        - netbird-client
+        - netbird
         - netbird-ui
         - numix-icon-theme-circle
         - pv
