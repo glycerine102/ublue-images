@@ -59,9 +59,9 @@ modules:
         - firefox-langpacks
         - thunderbird
 
+  - from-file: brew.yml
   - from-file: flatpaks.yml
   - from-file: fonts.yml
-  - from-file: brew.yml
   - from-file: script.yml
   - from-file: systemd.yml
 
