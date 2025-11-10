@@ -39,6 +39,8 @@ modules:
         - git-filter-repo
         - mbuffer
         - micro
+        - netbird
+        - netbird-ui
         - numix-icon-theme-circle
         - pv
         - rbw
