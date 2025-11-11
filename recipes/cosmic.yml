@@ -14,12 +14,6 @@ image-version: 43-20251110
 modules:
 - from-file: common/files.yml
 - from-file: common/dnf.yml
-- from-file: common/brew.yml
-- from-file: common/flatpaks.yml
-- from-file: common/fonts.yml
-- from-file: common/script.yml
-- from-file: common/systemd.yml
-- from-file: common/signing.yml
 
 - type: dnf
   install:
@@ -32,6 +26,9 @@ modules:
     - cosmic-desktop
     - cosmic-desktop-apps
 
+- from-file: common/brew.yml
+- from-file: common/flatpaks.yml
+
 - type: default-flatpaks
   configurations:
   - scope: system
@@ -41,3 +38,8 @@ modules:
     install:
     - dev.edfloreshz.CosmicTweaks
     - org.gnome.Loupe
+
+- from-file: common/fonts.yml
+- from-file: common/script.yml
+- from-file: common/systemd.yml
+- from-file: common/signing.yml

@@ -29,9 +29,3 @@ modules:
     - numix-icon-theme-circle
     - pv
     - rbw
-
-  remove:
-    packages:
-    - firefox
-    - firefox-langpacks
-    - thunderbird
