@@ -26,6 +26,7 @@ modules:
     - cosmic-desktop
     - cosmic-desktop-apps
 
+- from-file: common/remove.yml
 - from-file: common/brew.yml
 - from-file: common/flatpaks.yml
 
