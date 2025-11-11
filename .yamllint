@@ -1,0 +1,14 @@
+---
+extends: default
+rules:
+  line-length: disable
+  indentation:
+    level: warning
+    spaces: 2
+    indent-sequences: whatever
+  braces:
+    level: warning
+    max-spaces-inside: 2
+  brackets:
+    level: warning
+    max-spaces-inside: 2
