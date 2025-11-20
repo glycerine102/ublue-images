@@ -45,4 +45,10 @@ modules:
 - from-file: common/fonts.yml
 - from-file: common/script.yml
 - from-file: common/systemd.yml
+
+- type: systemd
+  system:
+    enabled:
+    - tlp.service
+
 - from-file: common/signing.yml
