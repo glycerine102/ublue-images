@@ -18,6 +18,8 @@ modules:
 - type: dnf
   install:
     packages:
+    - tlp
+    - tlp-rdw
     - https://github.com/block/goose/releases/download/v1.12.1/Goose-1.12.1-1.x86_64.rpm
 
   group-install:
