@@ -1,0 +1,47 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: plasma-desktop
+
+# description will be included in the image's metadata
+description: Customized Fedora KDE Atomic
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/kinoite-main
+image-version: 43-20251110
+
+# module configuration, executed in order
+modules:
+- from-file: common/files.yml
+- from-file: common/dnf.yml
+
+- type: dnf
+
+  group-install:
+    with-optional: true
+    packages:
+    - virtualization
+
+- from-file: common/remove.yml
+- from-file: common/brew.yml
+- from-file: common/flatpaks.yml
+
+- type: default-flatpaks
+  configurations:
+  - scope: system
+    notify: true
+    repo:
+      title: Flathub (system)
+    install:
+    - com.github.PintaProject.Pinta
+    - com.github.mtkennerly.ludusavi
+    - com.usebottles.bottles
+    - org.kde.gwenview
+    - org.kde.haruna
+    - org.kde.kleopatra
+    - org.kde.okular
+
+- from-file: common/fonts.yml
+- from-file: common/script.yml
+- from-file: common/systemd.yml
+- from-file: common/signing.yml
