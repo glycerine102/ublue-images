@@ -12,10 +12,22 @@ modules:
     - com.bitwarden.desktop
     - com.brave.Browser
     - com.github.tchx84.Flatseal
+    - com.github.tenderowl.frog
     - com.mattermost.Desktop
     - com.spotify.Client
+    - com.usebruno.Bruno
+    - dev.vencord.Vesktop
+    - io.dbeaver.DBeaverCommunity
     - io.kopia.KopiaUI
+    - net.ankiweb.Anki
     - net.cozic.joplin_desktop
     - org.fedoraproject.MediaWriter
+    - org.gnome.meld
     - org.localsend.localsend_app
+    - org.mozilla.Thunderbird
+    - org.mozilla.firefox
+    - org.prismlauncher.PrismLauncher
+    - org.qbittorrent.qBittorrent
+    - org.raspberrypi.rpi-imager
+    - org.winehq.Wine
     - us.zoom.Zoom
