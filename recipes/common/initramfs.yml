@@ -3,3 +3,5 @@
 
 modules:
 - type: initramfs
+  env:
+    DRACUT_NO_XATTR: "1"
