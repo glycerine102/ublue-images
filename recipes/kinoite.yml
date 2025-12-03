@@ -18,6 +18,8 @@ modules:
 - from-file: common/dnf.yml
 - from-file: desktop/dnf.yml
 
+- from-file: desktop/zfs.yml
+
 - from-file: common/remove.yml
 - from-file: common/brew.yml
 
