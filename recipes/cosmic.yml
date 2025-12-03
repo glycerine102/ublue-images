@@ -8,7 +8,7 @@ description: Customized Fedora COSMIC Atomic
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/base-main
-image-version: 43-20251110
+image-version: 43-20251203
 
 # module configuration, executed in order
 modules:
