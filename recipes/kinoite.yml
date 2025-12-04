@@ -32,7 +32,7 @@ modules:
 - from-file: common/script.yml
 
 - from-file: common/systemd.yml
-#- from-file: desktop/systemd.yml
+- from-file: desktop/systemd.yml
 
 - from-file: desktop/kargs.yml
 - from-file: common/initramfs.yml
