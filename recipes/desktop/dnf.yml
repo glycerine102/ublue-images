@@ -8,6 +8,7 @@ modules:
     packages:
     - https://github.com/ilya-zlobintsev/LACT/releases/download/v0.8.3/lact-0.8.3-0.x86_64.fedora-42.rpm
     - input-remapper
+    - mangohud
 
   group-install:
     with-optional: true
