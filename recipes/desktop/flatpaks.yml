@@ -16,3 +16,5 @@ modules:
     - org.kde.haruna
     - org.kde.kleopatra
     - org.kde.okular
+    - com.steamgriddb.SGDBoop
+    - io.github.dweymouth.supersonic

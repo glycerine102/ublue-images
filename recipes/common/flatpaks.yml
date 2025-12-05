@@ -24,6 +24,7 @@ modules:
     - org.fedoraproject.MediaWriter
     - org.gnome.meld
     - org.localsend.localsend_app
+    - org.filezillaproject.Filezilla
     - org.mozilla.Thunderbird
     - org.mozilla.firefox
     - org.prismlauncher.PrismLauncher
