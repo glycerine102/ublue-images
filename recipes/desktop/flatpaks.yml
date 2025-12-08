@@ -10,7 +10,6 @@ modules:
       title: Flathub (system)
     install:
     - com.github.PintaProject.Pinta
-    - com.github.mtkennerly.ludusavi
     - com.usebottles.bottles
     - org.kde.gwenview
     - org.kde.haruna
