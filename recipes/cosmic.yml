@@ -17,8 +17,8 @@ modules:
 - from-file: common/files.yml
 #- from-file: laptop/files.yml
 
-- from-file: common/dnf.yml
-- from-file: laptop/dnf.yml
+#- from-file: common/dnf.yml
+#- from-file: laptop/dnf.yml
 
 #- from-file: laptop/zfs.yml
 
