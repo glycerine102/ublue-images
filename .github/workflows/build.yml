@@ -41,3 +41,17 @@ jobs:
 
         # enabled by default, disable if your image is small and you want faster builds
         maximize_build_space: true
+
+    # Remove old instances of packages
+    - name: Removes old Desktop Images
+      uses: actions/delete-package-versions@v5
+      with:
+        package-name: 'plasma-desktop'
+        package-type: 'container'
+        min-versions-to-keep: 16
+    - name: Removes old Laptop Images
+      uses: actions/delete-package-versions@v5
+      with:
+        package-name: 'cosmic-laptop'
+        package-type: 'container'
+        min-versions-to-keep: 16
