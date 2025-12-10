@@ -12,4 +12,4 @@ modules:
   - amdgpu.si_support=1
   - amdgpu.cik_support=1
   # Allows LACT to operate the GPU
-  - amdgpu.ppfeaturemask=0x%x\n
+  - amdgpu.ppfeaturemask=0xffffffff
