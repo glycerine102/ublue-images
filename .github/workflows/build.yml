@@ -38,16 +38,17 @@ jobs:
         # enabled by default, disable if your image is small and you want faster builds
         maximize_build_space: true
 
-    # Remove old instances of packages
+  clean:
+    strategy:
+      matrix:
+        package: [ 'plasma-desktop', 'cosmic-laptop' ]
+    runs-on: ubuntu-latest
+
+    steps:
     - name: Removes old Desktop Images
       uses: actions/delete-package-versions@v5
       with:
-        package-name: 'plasma-desktop'
-        package-type: 'container'
+        package-name: ${{ matrix.package }}
         min-versions-to-keep: 16
-    - name: Removes old Laptop Images
-      uses: actions/delete-package-versions@v5
-      with:
-        package-name: 'cosmic-laptop'
+        delete-only-pre-release-versions: "false"
         package-type: 'container'
-        min-versions-to-keep: 16
