@@ -8,7 +8,7 @@ description: Customized Fedora KDE Atomic
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/blue-build/base-images/fedora-kinoite
-image-version: 20251209-43
+image-version: 20251217-43
 platforms:
 - linux/amd64
 
