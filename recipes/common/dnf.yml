@@ -28,5 +28,6 @@ modules:
     - netbird-client
     - netbird-ui
     - numix-icon-theme-circle
+    - podman-compose
     - pv
     - rbw
