@@ -7,6 +7,7 @@ modules:
   install:
     packages:
     - https://github.com/ilya-zlobintsev/LACT/releases/download/v0.8.3/lact-0.8.3-0.x86_64.fedora-42.rpm
+    - https://github.com/LizardByte/Sunshine/releases/download/v2025.1227.223216/Sunshine-2025.1227.223216-1.fc43.x86_64.rpm
     - input-remapper
     - mangohud
 
