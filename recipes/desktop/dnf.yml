@@ -12,8 +12,3 @@ modules:
     - input-remapper
     - mangohud
     - sas2flash
-
-  group-install:
-    with-optional: true
-    packages:
-    - virtualization
