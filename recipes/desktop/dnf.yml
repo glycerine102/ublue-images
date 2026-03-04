@@ -10,3 +10,8 @@ modules:
     - android-tools
     - input-remapper
     - mangohud
+
+  group-install:
+    with-optional: true
+    packages:
+    - virtualization
