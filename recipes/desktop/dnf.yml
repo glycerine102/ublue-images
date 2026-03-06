@@ -8,6 +8,7 @@ modules:
     packages:
     - https://github.com/ilya-zlobintsev/LACT/releases/download/v0.8.4/lact-0.8.4-0.x86_64.fedora-43.rpm
     - android-tools
+    - gdisk
     - input-remapper
     - mangohud
 
