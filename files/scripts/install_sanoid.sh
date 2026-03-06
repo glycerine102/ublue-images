@@ -10,7 +10,7 @@ log() {
 
 log "Install sanoid package"
 
-SANOID_URL="https://github.com/decoyjoe/sanoid-portable/releases/download/2.2.0-2/sanoid-portable"
+SANOID_URL="https://github.com/decoyjoe/sanoid-portable/releases/download/2.3.0-1/sanoid-portable"
 SANOID_DIR="/usr/bin"
 
 wget ${SANOID_URL} -O ${SANOID_DIR}/sanoid-portable
