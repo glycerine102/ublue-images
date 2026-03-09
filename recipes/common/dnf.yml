@@ -14,6 +14,7 @@ modules:
   install:
     packages:
     - alacritty
+    - android-tools
     - chezmoi
     - code
     - distrobox
