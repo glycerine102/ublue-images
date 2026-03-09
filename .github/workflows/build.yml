@@ -49,6 +49,6 @@ jobs:
       uses: actions/delete-package-versions@v5
       with:
         package-name: ${{ matrix.package }}
-        min-versions-to-keep: 18
+        min-versions-to-keep: 27
         delete-only-pre-release-versions: "false"
         package-type: 'container'
