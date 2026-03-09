@@ -21,6 +21,7 @@ modules:
     - fprintd
     - fprintd-pam
     - fish
+    - gdisk
     - git-filter-repo
     - libappindicator-gtk3
     - mbuffer
