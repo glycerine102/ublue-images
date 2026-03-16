@@ -8,12 +8,13 @@ description: Customized Fedora KDE Atomic
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/blue-build/base-images/fedora-kinoite
-image-version: 43
+image-version: 20260303-43
 platforms:
 - linux/amd64
 
 # module configuration, executed in order
 modules:
+
 - from-file: common/files.yml
 - from-file: desktop/files.yml
 
