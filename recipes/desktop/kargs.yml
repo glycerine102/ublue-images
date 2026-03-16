@@ -6,10 +6,5 @@ modules:
   kargs:
   # Enable full kernel preemption
   - preempt=full
-  # Use Vulkan driver for AMD GCN
-  - radeon.si_support=0
-  - radeon.cik_support=0
-  - amdgpu.si_support=1
-  - amdgpu.cik_support=1
   # Allows LACT to operate the GPU
   - amdgpu.ppfeaturemask=0xffffffff
