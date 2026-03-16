@@ -13,14 +13,13 @@
 # distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and limitations under the License.
 
-set -oue pipefail
+set -euo pipefail
 
 KERNEL_VERSION="$(rpm -q "kernel" --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 ZFS_MINOR_VERSION="2.4"
 
 curl -fLsS --retry 5 -o data.json "https://api.github.com/repos/openzfs/zfs/releases"
-# TODO add back .prerelease==false when 2.4 is out
-ZFS_VERSION=$(jq -r --arg ZMV "zfs-${ZFS_MINOR_VERSION}" '[ .[] | select(.draft==false) | select(.tag_name | startswith($ZMV))][0].tag_name' data.json|cut -f2- -d-)
+ZFS_VERSION=$(jq -r --arg ZMV "zfs-${ZFS_MINOR_VERSION}" '[ .[] | select(.prerelease==false and .draft==false) | select(.tag_name | startswith($ZMV))][0].tag_name' data.json|cut -f2- -d-)
 echo "ZFS_VERSION==$ZFS_VERSION"
 
 dnf install -y --setopt=install_weak_deps=False "kernel-devel-matched-$(rpm -q 'kernel' --queryformat '%{VERSION}')"
@@ -36,8 +35,8 @@ curl -fLsS --retry 5 \
 
 echo "Import key"
 # https://openzfs.github.io/openzfs-docs/Project%20and%20Community/Signing%20Keys.html
-gpg --yes --keyserver keyserver.ubuntu.com --recv D4598027
-gpg --yes --keyserver keyserver.ubuntu.com --recv C6AF658B
+curl -fLsS --retry 5 "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xD4598027"| gpg --yes --import
+curl -fLsS --retry 5 "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC6AF658B"| gpg --yes --import
 
 echo "Verifying tar.gz signature"
 if ! gpg --verify "zfs-${ZFS_VERSION}.tar.gz.asc" "zfs-${ZFS_VERSION}.tar.gz"
