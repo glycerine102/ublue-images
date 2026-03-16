@@ -2,6 +2,10 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 
 modules:
+# - type: containerfile
+#   containerfiles:
+#   - zfs
+
 - type: script
   scripts:
   - install_zfs.sh
