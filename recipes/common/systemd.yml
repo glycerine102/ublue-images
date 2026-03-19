@@ -4,8 +4,6 @@
 modules:
 - type: systemd
   system:
-    enabled:
-    - netbird.service
     disabled:
     - flatpak-system-update.timer
   user:

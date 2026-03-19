@@ -4,8 +4,6 @@
 modules:
 - type: dnf
   repos:
-    copr:
-    - jsbillings/netbird
     files:
     - https://packages.microsoft.com/yumrepos/vscode/config.repo
     keys:
@@ -27,8 +25,6 @@ modules:
     - libappindicator-gtk3
     - mbuffer
     - micro
-    - netbird-client
-    - netbird-ui
     - numix-icon-theme-circle
     - podman-compose
     - pv
