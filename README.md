@@ -16,11 +16,15 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/glycerine102/custom-image-name:latest
+  sudo bootc switch --enforce-container-sigpolicy ghcr.io/glycerine102/plasma-desktop:<git-hash>-<fedora-version>
   ```
 - Reboot again to complete the installation
   ```
   systemctl reboot
+  ```
+- View Status of the Images
+  ```
+  sudo bootc status
   ```
 
 The `latest` tag will automatically point to the latest build.
