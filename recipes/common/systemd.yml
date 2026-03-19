@@ -6,6 +6,7 @@ modules:
   system:
     disabled:
     - flatpak-system-update.timer
+    - rpm-ostreed-automatic.timer
   user:
     disabled:
     - flatpak-user-update.timer
