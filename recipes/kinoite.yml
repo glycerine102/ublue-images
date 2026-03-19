@@ -7,8 +7,8 @@ name: plasma-desktop
 description: Customized Fedora KDE Atomic
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/blue-build/base-images/fedora-kinoite
-image-version: 20260303-43
+base-image: ghcr.io/danathar/zfs-kinoite-containerfile
+image-version: stable-33-9d25a42
 platforms:
 - linux/amd64
 
@@ -20,8 +20,6 @@ modules:
 
 - from-file: common/dnf.yml
 - from-file: desktop/dnf.yml
-
-- from-file: desktop/zfs.yml
 
 - from-file: common/remove.yml
 - from-file: common/brew.yml
