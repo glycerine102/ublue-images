@@ -6,4 +6,5 @@ modules:
   snippets: []
   scripts:
   - install_ludusavi.sh
+  - install_netbird.sh
   - manage_files.sh
