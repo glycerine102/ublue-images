@@ -22,6 +22,7 @@ modules:
     - fish
     - gdisk
     - git-filter-repo
+    - libappindicator
     - libappindicator-gtk3
     - mbuffer
     - micro
