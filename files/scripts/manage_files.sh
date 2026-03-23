@@ -9,6 +9,5 @@ log() {
 }
 
 log "Ensure directories exist"
-mkdir -p /var/log/netbird
 
 log "Done managing files"

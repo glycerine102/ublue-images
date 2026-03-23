@@ -16,3 +16,10 @@ rpm -ivh --noscripts https://github.com/netbirdio/netbird/releases/download/v${N
 rpm -ivh --noscripts https://github.com/netbirdio/netbird/releases/download/v${NETBIRD_VERSION}/netbird-ui_${NETBIRD_VERSION}_linux_amd64.rpm
 
 log "Done installing packages"
+
+log "Ensure directories exist"
+
+mkdir -p /var/log/netbird
+mkdir -p /var/run/netbird
+
+log "Done creating directories"
