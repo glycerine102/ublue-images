@@ -4,5 +4,5 @@
 [group('System')]
 update: snap-apps
     #!/usr/bin/env bash
-    /home/linuxbrew/.linuxbrew/bin/topgrade \
-    --config "{{ "{{ config_directory() }}" }}/topgrade/topgrade.toml" --keep
+    topgrade \
+    --config "{{ config_directory() }}/topgrade/topgrade.toml" --keep
