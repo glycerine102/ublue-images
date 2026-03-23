@@ -4,6 +4,8 @@
 modules:
 - type: dnf
   repos:
+    copr:
+    - lilay/topgrade
     files:
     - https://packages.microsoft.com/yumrepos/vscode/config.repo
     keys:
@@ -30,3 +32,4 @@ modules:
     - podman-compose
     - pv
     - rbw
+    - topgrade
