@@ -2,9 +2,9 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 
 modules:
-- type: dnf
-  remove:
-    packages:
-    - firefox
-    - firefox-langpacks
-    - thunderbird
+  - type: dnf
+    remove:
+      packages:
+        - firefox
+        - firefox-langpacks
+        - thunderbird

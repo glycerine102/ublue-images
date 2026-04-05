@@ -2,8 +2,8 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 
 modules:
-- type: brew
-  nofile-limits: true
-  brew-analytics: false
-  auto-update: false
-  auto-upgrade: false
+  - type: brew
+    nofile-limits: true
+    brew-analytics: false
+    auto-update: false
+    auto-upgrade: false

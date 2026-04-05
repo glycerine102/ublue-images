@@ -2,9 +2,9 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 
 modules:
-- type: dnf
+  - type: dnf
 
-  install:
-    packages:
-    - tlp
-    - tlp-rdw
+    install:
+      packages:
+        - tlp
+        - tlp-rdw

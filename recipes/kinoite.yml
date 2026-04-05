@@ -10,32 +10,31 @@ description: Customized Fedora KDE Atomic
 base-image: ghcr.io/danathar/kinoite-zfs
 image-version: stable-131-9841863
 platforms:
-- linux/amd64
+  - linux/amd64
 
 # module configuration, executed in order
 modules:
+  - from-file: common/files.yml
+  - from-file: desktop/files.yml
 
-- from-file: common/files.yml
-- from-file: desktop/files.yml
+  - from-file: common/dnf.yml
+  - from-file: desktop/dnf.yml
 
-- from-file: common/dnf.yml
-- from-file: desktop/dnf.yml
+  - from-file: desktop/zfs.yml
 
-- from-file: desktop/zfs.yml
+  - from-file: common/remove.yml
+  - from-file: common/brew.yml
 
-- from-file: common/remove.yml
-- from-file: common/brew.yml
+  - from-file: common/justfiles.yml
 
-- from-file: common/justfiles.yml
+  - from-file: common/fonts.yml
 
-- from-file: common/fonts.yml
+  - from-file: common/script.yml
 
-- from-file: common/script.yml
+  - from-file: common/systemd.yml
+  - from-file: desktop/systemd.yml
 
-- from-file: common/systemd.yml
-- from-file: desktop/systemd.yml
+  - from-file: desktop/kargs.yml
+  - from-file: common/initramfs.yml
 
-- from-file: desktop/kargs.yml
-- from-file: common/initramfs.yml
-
-- from-file: common/signing.yml
+  - from-file: common/signing.yml

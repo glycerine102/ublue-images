@@ -2,34 +2,34 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 
 modules:
-- type: dnf
-  repos:
-    copr:
-    - lilay/topgrade
-    files:
-    - https://packages.microsoft.com/yumrepos/vscode/config.repo
-    keys:
-    - https://packages.microsoft.com/keys/microsoft.asc
+  - type: dnf
+    repos:
+      copr:
+        - lilay/topgrade
+      files:
+        - https://packages.microsoft.com/yumrepos/vscode/config.repo
+      keys:
+        - https://packages.microsoft.com/keys/microsoft.asc
 
-  install:
-    packages:
-    - alacritty
-    - android-tools
-    - chezmoi
-    - code
-    - distrobox
-    - fastfetch
-    - fprintd
-    - fprintd-pam
-    - fish
-    - gdisk
-    - git-filter-repo
-    - libappindicator
-    - libappindicator-gtk3
-    - mbuffer
-    - micro
-    - numix-icon-theme-circle
-    - podman-compose
-    - pv
-    - rbw
-    - topgrade
+    install:
+      packages:
+        - alacritty
+        - android-tools
+        - chezmoi
+        - code
+        - distrobox
+        - fastfetch
+        - fprintd
+        - fprintd-pam
+        - fish
+        - gdisk
+        - git-filter-repo
+        - libappindicator
+        - libappindicator-gtk3
+        - mbuffer
+        - micro
+        - numix-icon-theme-circle
+        - podman-compose
+        - pv
+        - rbw
+        - topgrade

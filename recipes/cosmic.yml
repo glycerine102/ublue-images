@@ -10,32 +10,31 @@ description: Customized Fedora COSMIC Atomic
 base-image: ghcr.io/blue-build/base-images/fedora-cosmic
 image-version: 43
 platforms:
-- linux/amd64
+  - linux/amd64
 
 # module configuration, executed in order
 modules:
+  - from-file: common/files.yml
+  #- from-file: laptop/files.yml
 
-- from-file: common/files.yml
-#- from-file: laptop/files.yml
+  - from-file: common/dnf.yml
+  - from-file: laptop/dnf.yml
 
-- from-file: common/dnf.yml
-- from-file: laptop/dnf.yml
+  #- from-file: laptop/zfs.yml
 
-#- from-file: laptop/zfs.yml
+  - from-file: common/remove.yml
+  - from-file: common/brew.yml
 
-- from-file: common/remove.yml
-- from-file: common/brew.yml
+  - from-file: common/justfiles.yml
 
-- from-file: common/justfiles.yml
+  - from-file: common/fonts.yml
 
-- from-file: common/fonts.yml
+  - from-file: common/script.yml
 
-- from-file: common/script.yml
+  - from-file: common/systemd.yml
+  - from-file: laptop/systemd.yml
 
-- from-file: common/systemd.yml
-- from-file: laptop/systemd.yml
+  # - from-file: desktop/kargs.yml
+  # - from-file: common/initramfs.yml
 
-# - from-file: desktop/kargs.yml
-# - from-file: common/initramfs.yml
-
-- from-file: common/signing.yml
+  - from-file: common/signing.yml

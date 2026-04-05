@@ -2,11 +2,11 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 
 modules:
-- type: systemd
-  system:
-    disabled:
-    - flatpak-system-update.timer
-    - rpm-ostreed-automatic.timer
-  user:
-    disabled:
-    - flatpak-user-update.timer
+  - type: systemd
+    system:
+      disabled:
+        - flatpak-system-update.timer
+        - rpm-ostreed-automatic.timer
+    user:
+      disabled:
+        - flatpak-user-update.timer

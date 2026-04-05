@@ -2,9 +2,9 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 
 modules:
-- type: kargs
-  kargs:
-  # Enable full kernel preemption
-  - preempt=full
-  # Allows LACT to operate the GPU
-  - amdgpu.ppfeaturemask=0xffffffff
+  - type: kargs
+    kargs:
+      # Enable full kernel preemption
+      - preempt=full
+      # Allows LACT to operate the GPU
+      - amdgpu.ppfeaturemask=0xffffffff

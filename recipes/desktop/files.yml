@@ -2,7 +2,7 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 
 modules:
-- type: files
-  files:
-  - source: desktop
-    destination: /
+  - type: files
+    files:
+      - source: desktop
+        destination: /

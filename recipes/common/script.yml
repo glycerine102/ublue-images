@@ -2,9 +2,9 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 
 modules:
-- type: script
-  snippets: []
-  scripts:
-  - install_ludusavi.sh
-  - install_netbird.sh
-  - manage_files.sh
+  - type: script
+    snippets: []
+    scripts:
+      - install_ludusavi.sh
+      - install_netbird.sh
+      - manage_files.sh
