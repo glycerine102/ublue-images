@@ -8,7 +8,7 @@ description: Customized Fedora KDE Atomic
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/danathar/kinoite-zfs
-image-version: stable-131-9841863
+image-version: stable-144-9841863
 platforms:
   - linux/amd64
 
