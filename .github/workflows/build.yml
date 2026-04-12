@@ -2,9 +2,8 @@ name: bluebuild
 on:
   push:
     tags:
-    - v[0-9]+.[0-9]+.[0-9]+
+      - v[0-9]+.[0-9]+.[0-9]+
   workflow_dispatch:
-
 
 concurrency:
   # only run one build at a time
@@ -22,33 +21,33 @@ jobs:
       fail-fast: false # stop GH from cancelling all matrix builds if one fails
       matrix:
         recipe:
-        # !! Add your recipes here
-        - cosmic.yml
-        - kinoite.yml
+          # !! Add your recipes here
+          - cosmic.yml
+          - kinoite.yml
     steps:
-    # the build is fully handled by the reusable github action
-    - name: Build Custom Image
-      uses: blue-build/github-action@v1.10
-      with:
-        recipe: ${{ matrix.recipe }}
-        cosign_private_key: ${{ secrets.SIGNING_SECRET }}
-        registry_token: ${{ github.token }}
-        pr_event_number: ${{ github.event.number }}
+      # the build is fully handled by the reusable github action
+      - name: Build Custom Image
+        uses: blue-build/github-action@v1.10
+        with:
+          recipe: ${{ matrix.recipe }}
+          cosign_private_key: ${{ secrets.SIGNING_SECRET }}
+          registry_token: ${{ github.token }}
+          pr_event_number: ${{ github.event.number }}
 
-        # enabled by default, disable if your image is small and you want faster builds
-        maximize_build_space: true
+          # enabled by default, disable if your image is small and you want faster builds
+          maximize_build_space: true
 
   clean:
     strategy:
       matrix:
-        package: [ 'plasma-desktop', 'cosmic-laptop' ]
+        package: ["plasma-desktop", "cosmic-laptop"]
     runs-on: ubuntu-latest
 
     steps:
-    - name: Removes old Desktop Images
-      uses: actions/delete-package-versions@v5
-      with:
-        package-name: ${{ matrix.package }}
-        min-versions-to-keep: 27
-        delete-only-pre-release-versions: "false"
-        package-type: 'container'
+      - name: Removes old Desktop Images
+        uses: actions/delete-package-versions@v5
+        with:
+          package-name: ${{ matrix.package }}
+          min-versions-to-keep: 27
+          delete-only-pre-release-versions: "false"
+          package-type: "container"
