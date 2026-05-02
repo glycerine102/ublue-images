@@ -12,7 +12,6 @@ modules:
         - alacritty
         - android-tools
         - chezmoi
-        - code
         - distrobox
         - fastfetch
         - fprintd
