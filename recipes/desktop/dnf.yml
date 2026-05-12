@@ -8,9 +8,29 @@ modules:
       nonfree: negativo17
     install:
       packages:
-        - https://github.com/ilya-zlobintsev/LACT/releases/download/v0.9.0/lact-0.9.0-0.x86_64.fedora-43.rpm
+        # system
         - input-remapper
+
+        # development
+        - rustup
+
+        # gaming
+        - https://github.com/ilya-zlobintsev/LACT/releases/download/v0.9.0/lact-0.9.0-0.x86_64.fedora-43.rpm
         - mangohud
         - mono-core
-        - rustup
         - steam
+
+        # virtualization
+        - libvirt
+        - libvirt-nss
+        - qemu-device-display-virtio-gpu
+        - qemu-device-display-virtio-vga
+        - qemu-device-usb-redirect
+        - qemu-img
+        - qemu-kvm
+        - qemu-tools
+        - qemu-user
+        - qemu-user-binfmt
+        - virt-install
+        - virt-manager
+        - virt-viewer
