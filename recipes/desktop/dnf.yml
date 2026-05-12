@@ -3,10 +3,14 @@
 
 modules:
   - type: dnf
-
+    repos:
+      cleanup: true
+      nonfree: negativo17
     install:
       packages:
         - https://github.com/ilya-zlobintsev/LACT/releases/download/v0.9.0/lact-0.9.0-0.x86_64.fedora-43.rpm
         - input-remapper
         - mangohud
+        - mono-core
         - rustup
+        - steam
