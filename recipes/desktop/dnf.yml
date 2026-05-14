@@ -23,6 +23,7 @@ modules:
         # virtualization
         - libvirt
         - libvirt-nss
+        - libvirt-daemon-driver-storage-zfs
         - qemu-device-display-virtio-gpu
         - qemu-device-display-virtio-vga
         - qemu-device-usb-redirect
