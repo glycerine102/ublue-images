@@ -19,6 +19,7 @@ modules:
         - fish
         - gdisk
         - git-filter-repo
+        - kvantum
         - libappindicator
         - libappindicator-gtk3
         - mbuffer
