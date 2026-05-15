@@ -1,0 +1,42 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: thinkpad-laptop
+
+# description will be included in the image's metadata
+description: Customized Fedora Atomic
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/glycerine102/ucore-zfs
+image-version: "latest"
+alt-tags:
+  - "43"
+platforms:
+  - linux/amd64
+
+# module configuration, executed in order
+modules:
+  - from-file: common/files.yml
+  #- from-file: laptop/files.yml
+
+  - from-file: common/dnf.yml
+  - from-file: laptop/dnf.yml
+
+  #- from-file: laptop/zfs.yml
+
+  - from-file: common/remove.yml
+  - from-file: common/brew.yml
+
+  - from-file: common/justfiles.yml
+
+  - from-file: common/fonts.yml
+
+  - from-file: common/script.yml
+
+  - from-file: common/systemd.yml
+  - from-file: laptop/systemd.yml
+
+  # - from-file: desktop/kargs.yml
+  # - from-file: common/initramfs.yml
+
+  - from-file: common/signing.yml
