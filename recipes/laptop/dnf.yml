@@ -6,5 +6,7 @@ modules:
 
     install:
       packages:
+        - fprintd-clients
+        - fprintd-clients-pam
         - tlp
         - tlp-rdw

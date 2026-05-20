@@ -14,8 +14,6 @@ modules:
         - chezmoi
         - distrobox
         - fastfetch
-        - fprintd
-        - fprintd-pam
         - fish
         - gdisk
         - git-filter-repo
