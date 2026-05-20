@@ -8,6 +8,7 @@ modules:
       packages:
         - fprintd-clients
         - fprintd-clients-pam
+        - open-fprintd
         - tlp
         - tlp-rdw
 
