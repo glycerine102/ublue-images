@@ -4,6 +4,10 @@
 modules:
   - type: dnf
 
+    repos:
+      copr:
+        - sneexy/python-validity
+
     install:
       packages:
         - fprintd-clients
