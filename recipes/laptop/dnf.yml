@@ -9,6 +9,7 @@ modules:
         - fprintd-clients
         - fprintd-clients-pam
         - open-fprintd
+        - python3-validity
         - tlp
         - tlp-rdw
 
