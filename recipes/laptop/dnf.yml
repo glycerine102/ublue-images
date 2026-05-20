@@ -10,3 +10,9 @@ modules:
         - fprintd-clients-pam
         - tlp
         - tlp-rdw
+
+    remove:
+      auto-remove: true
+      packages:
+        - tuned
+        - tuned-ppd
