@@ -7,9 +7,16 @@ modules:
       cleanup: true
       nonfree: negativo17
     install:
+      install-weak-deps: true
+      allow-erasing: true
       packages:
         # system
         - input-remapper
+
+        # video
+        - gstreamer1-plugin-vaapi
+        - libheif
+        - mesa-va-drivers
 
         # development
         - rustup
