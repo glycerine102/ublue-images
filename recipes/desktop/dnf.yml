@@ -23,6 +23,7 @@ modules:
         - mangohud
         - mono-core
         - steam
+        - steam-devices
 
         # virtualization
         - libvirt
