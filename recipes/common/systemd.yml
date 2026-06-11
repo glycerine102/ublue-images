@@ -5,10 +5,8 @@ modules:
   - type: systemd
     system:
       disabled:
-        - system-flatpak-setup.timer
         - flatpak-system-update.timer
         - rpm-ostreed-automatic.timer
     user:
       disabled:
-        - user-flatpak-setup.timer
         - flatpak-user-update.timer
