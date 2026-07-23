@@ -8,7 +8,7 @@ description: Customized Fedora KDE Atomic
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/glycerine102/ucore-zfs
-image-version: "20260706"
+image-version: "20260723"
 alt-tags:
   - "44"
 platforms:
