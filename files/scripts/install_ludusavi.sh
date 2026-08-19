@@ -4,7 +4,7 @@
 set -e
 
 # Set variables
-LUDUSAVI_URL=https://github.com/mtkennerly/ludusavi/releases/download/v0.30.0/ludusavi-v0.30.0-linux.tar.gz
+LUDUSAVI_URL=https://github.com/mtkennerly/ludusavi/releases/download/v0.31.0/ludusavi-v0.31.0-linux.tar.gz
 TEMP_DIR=$(mktemp -d)
 BINARY_DIR=/usr/bin
 
