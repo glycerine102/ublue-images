@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 # Exit immediately if a command exits with a non-zero status
-set -e
+set -oue pipefail
 
 # Set variables
-LUDUSAVI_URL=https://github.com/mtkennerly/ludusavi/releases/download/v0.31.0/ludusavi-v0.31.0-linux.tar.gz
+LUDUSAVI_VERSION=0.31.0
+LUDUSAVI_URL=https://github.com/mtkennerly/ludusavi/releases/download/v${LUDUSAVI_VERSION}/ludusavi-v${LUDUSAVI_VERSION}-linux.tar.gz
 TEMP_DIR=$(mktemp -d)
 BINARY_DIR=/usr/bin
 
