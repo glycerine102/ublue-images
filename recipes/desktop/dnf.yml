@@ -19,7 +19,7 @@ modules:
         - rustup
 
         # gaming
-        - https://github.com/ilya-zlobintsev/LACT/releases/download/v0.9.1/lact-0.9.1-0.x86_64.fedora-44.rpm
+        - https://github.com/ilya-zlobintsev/LACT/releases/download/v0.10.0/lact-0.10.0-0.x86_64.fedora-44.rpm
         - mangohud
         - mono-core
         - steam
