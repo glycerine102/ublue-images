@@ -37,3 +37,6 @@ ACTION!="remove", SUBSYSTEM=="usb", ATTR{idProduct}=="310a", ATTR{idVendor}=="2d
 # 8BitDo Ultimate 2 Wireless; Bluetooth; USB/2.4GHz
 ACTION!="remove", SUBSYSTEM=="input", ATTRS{name}=="8BitDo Ultimate 2 Wireless", ENV{ID_INPUT_JOYSTICK}="1", TAG+="uaccess"
 ACTION!="remove", SUBSYSTEM=="usb", ATTR{idProduct}=="310b", ATTR{idVendor}=="2dc8", ENV{ID_INPUT_JOYSTICK}="1", TAG+="uaccess"
+
+# Add hidraw rule for Browser Updater
+ACTION!="remove", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="2dc8", TAG+="uaccess"
