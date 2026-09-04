@@ -7,8 +7,8 @@ install-joplin version="3.7.14":
 
     app_name="Joplin"
     appimage_name="${app_name}-${version}.AppImage"
-
     download_url="https://github.com/laurent22/joplin/releases/download/v${version}/${appimage_name}"
+
     download_dir="{{ home_directory() }}/Applications"
     appimage_path="${download_dir}/${appimage_name}"
     extract_dir="${download_dir}/${app_name}.AppImage"
@@ -25,6 +25,8 @@ install-joplin version="3.7.14":
         cd "$work_dir"
         "$appimage_path" --appimage-extract
     )
+
+    test -x "$work_dir/squashfs-root/AppRun"
 
     rm -rf "$extract_dir"
     mv "$work_dir/squashfs-root" "$extract_dir"
