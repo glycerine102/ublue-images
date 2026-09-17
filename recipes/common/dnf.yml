@@ -7,6 +7,10 @@ modules:
       copr:
         - lilay/topgrade
 
+      files:
+        add:
+          - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+
     install:
       packages:
         - alacritty
@@ -27,4 +31,5 @@ modules:
         - podman-compose
         - pv
         - rbw
+        - terra-release
         - topgrade
