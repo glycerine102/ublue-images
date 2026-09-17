@@ -6,6 +6,7 @@ modules:
     repos:
       cleanup: true
       nonfree: negativo17
+
     install:
       install-weak-deps: true
       allow-erasing: true
@@ -22,6 +23,7 @@ modules:
         - https://github.com/ilya-zlobintsev/LACT/releases/download/v0.10.0/lact-0.10.0-0.x86_64.fedora-44.rpm
         - mangohud
         - mono-core
+        - protonplus
         - steam
         - steam-devices
 
