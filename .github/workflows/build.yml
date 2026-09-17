@@ -41,7 +41,7 @@ jobs:
   clean:
     strategy:
       matrix:
-        package: ["plasma-desktop", "cosmic-laptop"]
+        package: ["plasma-desktop", "thinkpad-laptop"]
     runs-on: ubuntu-latest
 
     steps:
