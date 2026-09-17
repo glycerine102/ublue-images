@@ -6,27 +6,40 @@ install-joplin version="3.7.14":
     set -euo pipefail
 
     app_name="Joplin"
-    appimage_name="${app_name}-${version}.AppImage"
-    download_url="https://github.com/laurent22/joplin/releases/download/v${version}/${appimage_name}"
+    appimage_name="${app_name}-{{version}}.AppImage"
+    download_url="https://github.com/laurent22/joplin/releases/download/v{{version}}/${appimage_name}"
 
-    download_dir="{{ home_directory() }}/Applications"
-    appimage_path="${download_dir}/${appimage_name}"
-    extract_dir="${download_dir}/${app_name}.AppImage"
+    install_dir="{{ home_directory() }}/Applications"
+    appimage_path="${install_dir}/${appimage_name}"
+    extracted_path="${install_dir}/${app_name}.AppImage"
+    previous_path="${install_dir}/.${app_name}.AppImage.previous"
+    staging_path="${install_dir}/.${app_name}.AppImage.staging"
 
-    mkdir -p "$download_dir"
+    mkdir -p "$install_dir"
 
-    curl --fail --location --output "$appimage_path" "$download_url"
+    curl --fail --location --retry 3 --retry-all-errors \
+        --output "$appimage_path" \
+        "$download_url"
     chmod 0755 "$appimage_path"
 
-    work_dir="$(mktemp -d)"
-    trap 'rm -rf "$work_dir"' EXIT
+    extract_workdir="$(mktemp -d)"
+    trap 'rm -rf "$extract_workdir" "$staging_path"' EXIT
+
+    rm -rf "$staging_path"
 
     (
-        cd "$work_dir"
+        cd "$extract_workdir"
         "$appimage_path" --appimage-extract
     )
 
-    test -x "$work_dir/squashfs-root/AppRun"
+    test -x "$extract_workdir/squashfs-root/AppRun"
+    mv "$extract_workdir/squashfs-root" "$staging_path"
 
-    rm -rf "$extract_dir"
-    mv "$work_dir/squashfs-root" "$extract_dir"
+    rm -rf "$previous_path"
+
+    if [[ -e "$extracted_path" ]]; then
+        mv "$extracted_path" "$previous_path"
+    fi
+
+    mv "$staging_path" "$extracted_path"
+    rm -rf "$previous_path"
