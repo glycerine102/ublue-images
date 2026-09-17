@@ -33,6 +33,7 @@ modules:
         - repo: terra
           packages:
             - lact
+            - lan-mouse
 
         # virtualization
         - libvirt
