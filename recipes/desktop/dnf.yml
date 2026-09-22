@@ -33,6 +33,7 @@ modules:
         # system
         - repo: terra
           packages:
+            - 8bitdo-udev-rules
             - lact
             - lan-mouse
 
