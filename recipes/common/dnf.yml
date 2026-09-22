@@ -25,6 +25,7 @@ modules:
         - kvantum
         - libappindicator
         - libappindicator-gtk3
+        - libayatana-appindicator-gtk3
         - mbuffer
         - micro
         - numix-icon-theme-circle
