@@ -9,6 +9,7 @@ modules:
 
       files:
         add:
+          - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
           - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
 
     install:
@@ -32,5 +33,6 @@ modules:
         - podman-compose
         - pv
         - rbw
+        - tailscale
         - terra-release
         - topgrade
