@@ -10,7 +10,7 @@ log() {
 
 log "Install netbird package"
 
-NETBIRD_VERSION="0.77.0"
+NETBIRD_VERSION="0.79.0"
 
 rpm -ivh --noscripts https://github.com/netbirdio/netbird/releases/download/v${NETBIRD_VERSION}/netbird_${NETBIRD_VERSION}_linux_amd64.rpm
 
