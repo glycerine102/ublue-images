@@ -10,6 +10,11 @@ modules:
 
     install:
       packages:
+        # development
+        - repo: terra
+          packages:
+            - zed
+
         - fprintd-clients
         - fprintd-clients-pam
         - open-fprintd
