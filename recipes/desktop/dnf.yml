@@ -12,6 +12,7 @@ modules:
       allow-erasing: true
       packages:
         # development
+        - rustup
         - repo: terra
           packages:
             - zed
@@ -19,9 +20,6 @@ modules:
         # video
         - gstreamer1-plugin-vaapi
         - mesa-va-drivers
-
-        # development
-        - rustup
 
         # gaming
         - mangohud
