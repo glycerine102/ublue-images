@@ -24,10 +24,8 @@ modules:
         # gaming
         - mangohud
         - mono-core
-
         - steam
         - steam-devices
-
         - repo: terra
           packages:
             - 8bitdo-udev-rules
