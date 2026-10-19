@@ -17,6 +17,10 @@ modules:
         - tlp
         - tlp-rdw
 
+        - repo: terra
+          packages:
+            - lan-mouse
+
     remove:
       auto-remove: true
       packages:
