@@ -3,25 +3,27 @@
 
 modules:
   - type: dnf
-
     repos:
+      cleanup: true
       copr:
         - sneexy/python-validity
 
     install:
+      install-weak-deps: true
+      allow-erasing: true
       packages:
         # development
         - repo: terra
           packages:
             - zed
 
+        # system
         - fprintd-clients
         - fprintd-clients-pam
         - open-fprintd
         - python3-validity
         - tlp
         - tlp-rdw
-
         - repo: terra
           packages:
             - lan-mouse
