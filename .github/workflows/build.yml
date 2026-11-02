@@ -44,15 +44,16 @@ jobs:
   clean:
     needs: bluebuild
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
     strategy:
       matrix:
         package:
           - "plasma-desktop"
           - "thinkpad-laptop"
-
-    permissions:
-      contents: read
-      packages: write
 
     steps:
       - name: Removes old image versions
