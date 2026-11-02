@@ -8,6 +8,7 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
   cancel-in-progress: true
+
 jobs:
   bluebuild:
     name: Build ${{ matrix.image }}
@@ -37,20 +38,24 @@ jobs:
           recipe: ${{ matrix.recipe }}
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
-          pr_event_number:
-            ${{ github.event.number }}
-
-            # enabled by default, disable if your image is small and you want faster builds
+          pr_event_number: ${{ github.event.number }}
           maximize_build_space: true
 
   clean:
+    needs: bluebuild
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        package: ["plasma-desktop", "thinkpad-laptop"]
-    runs-on: ubuntu-latest
+        package:
+          - "plasma-desktop"
+          - "thinkpad-laptop"
+
+    permissions:
+      contents: read
+      packages: write
 
     steps:
-      - name: Removes old Desktop Images
+      - name: Removes old image versions
         uses: actions/delete-package-versions@v5
         with:
           package-name: ${{ matrix.package }}
