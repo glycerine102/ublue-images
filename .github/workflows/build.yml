@@ -40,6 +40,9 @@ jobs:
           pr_event_number: ${{ github.event.number }}
           maximize_build_space: true
 
+      - name: Install crane
+        uses: imjasonh/setup-crane@v0.4
+
       - name: Find published image metadata
         id: image_metadata
         env:
