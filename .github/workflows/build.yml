@@ -31,7 +31,7 @@ jobs:
             fedora: "44"
 
     steps:
-      - name: Build Custom Image
+      - name: Build custom image
         uses: blue-build/github-action@v1.13
         with:
           recipe: ${{ matrix.recipe }}
@@ -39,6 +39,15 @@ jobs:
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
           maximize_build_space: true
+
+      - name: Find published image metadata
+        id: image_metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REGISTRY_USER: ${{ github.actor }}
+          IMAGE_NAME: ${{ matrix.image }}
+          FEDORA_VERSION: ${{ matrix.fedora }}
+        run: bash .github/scripts/image-metadata.sh
 
       - name: Add short image tags
         uses: shrink/actions-docker-registry-tag@v5
