@@ -6,24 +6,29 @@ on:
   workflow_dispatch:
 
 concurrency:
-  # only run one build at a time
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
   cancel-in-progress: true
 jobs:
   bluebuild:
-    name: Build Custom Image
+    name: Build ${{ matrix.image }}
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
       packages: write
       id-token: write
+
     strategy:
-      fail-fast: false # stop GH from cancelling all matrix builds if one fails
+      fail-fast: false
       matrix:
         recipe:
-          # !! Add your recipes here
-          - kinoite.yml
-          - thinkpad.yml
+          - recipe: kinoite.yml
+            image: plasma-desktop
+            fedora: "44"
+          - recipe: thinkpad.yml
+            image: thinkpad-laptop
+            fedora: "44"
+
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
