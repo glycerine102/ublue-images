@@ -22,7 +22,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        recipe:
+        include:
           - recipe: kinoite.yml
             image: plasma-desktop
             fedora: "44"
