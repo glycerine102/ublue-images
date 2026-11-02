@@ -31,7 +31,6 @@ jobs:
             fedora: "44"
 
     steps:
-      # the build is fully handled by the reusable github action
       - name: Build Custom Image
         uses: blue-build/github-action@v1.13
         with:
@@ -40,6 +39,18 @@ jobs:
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
           maximize_build_space: true
+
+      - name: Add short image tags
+        uses: shrink/actions-docker-registry-tag@v5
+        with:
+          registry: ghcr.io
+          repository: glycerine102/${{ matrix.image }}
+          target: ${{ steps.image_metadata.outputs.source_tag }}
+          tags: |
+            latest
+            ${{ steps.image_metadata.outputs.short_sha }}
+            ${{ matrix.fedora }}
+            ${{ steps.image_metadata.outputs.build_date }}
 
   clean:
     needs: bluebuild
