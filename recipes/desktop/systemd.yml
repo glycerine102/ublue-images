@@ -9,5 +9,6 @@ modules:
         - lactd.service
         - sanoid.timer
         - sshd.service
+        - tailscaled.service
         - zfs-load-encrypted.service
         - zfs-scrub-monthly@storage.timer
