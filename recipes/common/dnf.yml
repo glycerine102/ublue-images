@@ -36,3 +36,4 @@ modules:
         - tailscale
         - terra-release
         - topgrade
+        - wl-clipboard
