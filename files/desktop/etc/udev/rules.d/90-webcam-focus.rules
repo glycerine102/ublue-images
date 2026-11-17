@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="video4linux", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="08e5", RUN+="/usr/bin/v4l2-ctl -d /dev/%k -c focus_automatic_continuous=0", RUN+="/usr/bin/v4l2-ctl -d /dev/%k -c focus_absolute=35"
